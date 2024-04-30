@@ -18,12 +18,12 @@ class TournamentController:
         name, location, start_date, end_date, rounds, description = self.tournamentView.get_tournament_info()
         self.tournament = (
             Tournament(name=name,
-                       location=location,
-                       start_date=start_date,
-                       end_date=end_date,
-                       rounds=rounds,
-                       current_round=1,
-                       description=description))
+                    location=location,
+                    start_date=start_date,
+                    end_date=end_date,
+                    rounds=rounds,
+                    current_round=1,
+                    description=description))
         self.tournament.save_tournament()
 
     def add_player_to_tournament(self):

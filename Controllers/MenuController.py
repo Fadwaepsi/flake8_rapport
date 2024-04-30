@@ -65,8 +65,8 @@ class MenuController:
                 self.report_view.display_tournament_players_alphabetical(players)
             case '5':
                 (tournament_name,
-                 rounds_list,
-                 tournament_id) = (
+                rounds_list,
+                tournament_id) = (
                     self.report_controller.get_tournament_rounds_and_matches())
                 players_sorted = (
                     self.report_controller.get_tournament_players_sorted(tournament_id))
