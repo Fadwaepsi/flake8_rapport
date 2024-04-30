@@ -11,9 +11,9 @@ class PlayerView(View):
 
     def get_player_info(self):
         """
-        Récupère et valide les informations du joueur telles que le prénom, le nom,
-        la date de naissance et l'identifiant national d'échecs.
-
+        Récupère et valide les informations du joueur telles que
+        le prénom, le nom, la date de naissance et l'identifiant 
+        national d'échecs.
         Returns:
             tuple: Un tuple contenant le prénom, le nom, la date de naissance
             et l'identifiant national d'échecs du joueur.

@@ -17,7 +17,6 @@ class ReportController:
         sorted_players = sorted(players, key=lambda x: (x['last_name'], x['first_name']))
         return sorted_players
 
-
     def list_tournaments(self):
         """
         Charge et retourne la liste des tournois depuis le modèle de rapport.
@@ -53,7 +52,7 @@ class ReportController:
 
     def tournament_players_alphabetical(self):
         """
-        Charge la liste des joueurs pour un tournoi spécifique, triée par ordre alphabétique de nom puis de prénom.
+        Charge la liste des jrs pour un tournoi spécifique, triée par ordre alphab de nom puis de prénom.
 
         Returns:
             list: Liste des joueurs du tournoi triés par ordre alphabétique.
