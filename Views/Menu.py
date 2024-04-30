@@ -36,4 +36,4 @@ class Menu:
         print("4. Liste des joueurs d'un Tournoi")
         print("5. Détails d'un Tournoi")
         print("0. Retourner au menu principal")
-        return input("\nEntrez le numéro correspondant à votre choix : ")
+        return input("\nEntrez le numéro correspondant à votre choix :")
