@@ -2,7 +2,6 @@
 
 class MatchView:
     def display_match_results(self, match, match_number, round_number):
-        
         # Affiche les résultats possibles pour un match donné.
 
         # Args:
