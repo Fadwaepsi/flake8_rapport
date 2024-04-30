@@ -1,13 +1,9 @@
 import re
-
-
 class View:
 
     def is_valid_date(self, date):
         """
-        Vérifie si la chaîne de caractères fournie est une date valide au format JJ/MM/AAAA.
-
-        Args:
+        Vérifie si la chaîne de caractères fournie est une date valide au Args:
             date (str): Chaîne de caractères à vérifier.
 
         Returns:
@@ -21,7 +17,6 @@ class View:
 
         Args:
             id (str): Chaîne de caractères à vérifier.
-
         Returns:
             bool: True si l'ID est valide, sinon False.
         """
@@ -29,37 +24,33 @@ class View:
 
     def is_valid_alpha(self, input_string):
         """
-        Vérifie si la chaîne de caractères fournie contient uniquement des caractères alphabétiques (et des espaces).
-
+        Vérifie si la chaîne de caractères fournie contient uniquement 
+        des caractères alphabétiques (et des espaces).
         Args:
-            input_string (str): Chaîne de caractères à vérifier.
-
+        input_string (str): Chaîne de caractères à vérifier.
         Returns:
-            bool: True si la chaîne est valide, sinon False.
+        bool: True si la chaîne est valide, sinon False.
         """
         return re.fullmatch(r'[A-Za-zÀ-ÖØ-öø-ÿ\s]{2,}', input_string) is not None
 
     def is_valid_int(self, input_string):
         """
         Vérifie si la chaîne de caractères fournie représente un entier valide.
-
         Args:
-            input_string (str): Chaîne de caractères à vérifier.
-
+        input_string (str): Chaîne de caractères à vérifier.
         Returns:
-            bool: True si la chaîne représente un entier valide, sinon False.
+        bool: True si la chaîne représente un entier valide, sinon False.
         """
         return input_string.isdigit()
 
     def get_valid_date_input(self, prompt):
         """
-        Demande à l'utilisateur d'entrer une date au format JJ/MM/AAAA jusqu'à ce qu'une entrée valide soit fournie.
-
+        Demande à l'utilisateur d'entrer une date au format JJ/MM/AAAA 
+        jusqu'à ce qu'une entrée valide soit fournie.
         Args:
-            prompt (str): L'invite affichée à l'utilisateur.
-
+        prompt (str): L'invite affichée à l'utilisateur.
         Returns:
-            str: Date valide entrée par l'utilisateur.
+        str: Date valide entrée par l'utilisateur.
         """
         while True:
             date = input(prompt)
@@ -70,13 +61,12 @@ class View:
 
     def get_valid_alpha_input(self, prompt):
         """
-        Demande à l'utilisateur d'entrer une chaîne alphabétique jusqu'à ce qu'une entrée valide soit fournie.
-
+        Demande à l'utilisateur d'entrer une chaîne alphabétique jusqu'à 
+        ce qu'une entrée valide soit fournie.
         Args:
-            prompt (str): L'invite affichée à l'utilisateur.
-
+        prompt (str): L'invite affichée à l'utilisateur.
         Returns:
-            str: Chaîne alphabétique valide entrée par l'utilisateur.
+        str: Chaîne alphabétique valide entrée par l'utilisateur.
         """
         while True:
             input_string = input(prompt)
@@ -87,15 +77,16 @@ class View:
 
     def get_valid_int_input(self, prompt, default_value=None):
         """
-        Demande à l'utilisateur d'entrer un entier jusqu'à ce qu'une entrée valide soit fournie.
-        Si l'utilisateur n'entre rien et qu'une valeur par défaut est fournie, renvoie cette valeur par défaut.
-
+        Demande à l'utilisateur d'entrer un entier jusqu'à ce qu'une entrée 
+        valide soit fournie.
+        Si l'utilisateur n'entre rien et qu'une valeur par défaut est fournie,
+        renvoie cette valeur par défaut.
         Args:
-            prompt (str): L'invite affichée à l'utilisateur.
-            default_value (int, optional): Valeur par défaut à retourner si l'utilisateur n'entre rien.
+        prompt (str): L'invite affichée à l'utilisateur.
+        default_value (int, optional): Valeur par défaut à retourner si l'utilisateur n'entre rien.
 
         Returns:
-            int: Entier valide entré par l'utilisateur ou valeur par défaut si fournie.
+        int: Entier valide entré par l'utilisateur ou valeur par défaut si fournie.
         """
         while True:
             input_string = input(prompt)
